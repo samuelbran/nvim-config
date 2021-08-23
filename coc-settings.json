@@ -1,0 +1,39 @@
+{
+    "python.jediEnabled": false,
+    "typescript.suggestionActions.enabled": false,
+    "javascript.suggestionActions.enabled": false,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "html",
+        "css",
+        "scss",
+        "markdown",
+        "json",
+        "javascript",
+        "typescript",
+        "javascriptreact",
+        "typescriptreact"
+    ],
+    "explorer.width": 35,
+    "explorer.floating.width": 80,
+    "explorer.floating.height": 40,
+    "explorer.buffer.root.template": "[icon & 1] OPEN EDITORS",
+    "explorer.file.root.template": "[icon & 1] PROJECT ([root])",
+    "explorer.file.child.template": "[git | 2] [selection | clip | 1] [indent][icon | 1] [diagnosticError & 1][filename omitCenter 1][modified][readonly] [linkIcon & 1][link growRight 1 omitCenter 5]",
+    "explorer.file.showHiddenFiles": true,
+    "explorer.file.reveal.auto": false,
+    "explorer.icon.expanded": "",
+    "explorer.icon.collapsed": "",
+    "explorer.icon.enableNerdfont": true,
+    "explorer.previewAction.onHover": false,
+    "emmet.includeLanguages": {
+        "vue-html": "html",
+        "javascript": "javascriptreact"
+    },
+    "prettier.tabWidth": 4,
+    "prettier.singleQuote": true,
+    "eslint.run": "onType",
+    "eslint.autoFixOnSave": true,
+    "snippets.extends": {
+        "typescript": ["javascript"]
+    }
+}
