@@ -1,5 +1,5 @@
-require('plugins')
-require('opts')
+require 'plugins'
+require 'opts'
 
 vim.cmd('colo two-firewatch')
 
