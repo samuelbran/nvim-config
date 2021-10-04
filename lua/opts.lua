@@ -1,12 +1,16 @@
 vim.o.background = 'dark'
 vim.o.termguicolors = true
+vim.cmd[[colorscheme nord]]
+
 vim.o.splitbelow = true
+vim.opt.splitright = true
 vim.o.ignorecase = true
 vim.o.updatetime = 300
 
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.wo.signcolumn = 'number'
+vim.opt.signcolumn = "yes"
 vim.wo.wrap = false
 vim.wo.colorcolumn = '80'
 vim.wo.cursorline = true
