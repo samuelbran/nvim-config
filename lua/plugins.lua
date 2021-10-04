@@ -1,4 +1,4 @@
-vim.cmd('packadd packer.nvim')
+vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(
   function()
@@ -12,10 +12,76 @@ return require('packer').startup(
 	    run = ':TSUpdate',
     }
     use {
+      "windwp/nvim-autopairs",
+      config = function()
+        require('nvim-autopairs').setup()
+      end
+    }
+    use {
+      "akinsho/toggleterm.nvim",
+      config = function()
+        require("toggleterm").setup{
+          direction = 'horizontal',
+          shade_terminals = false,
+          open_mapping = [[<c-t>]],
+          size = 20
+        }
+      end
+    }
+    use {
+      "terrortylor/nvim-comment",
+      config = function()
+        require('nvim_comment').setup()
+      end
+    }
+    use {
+      'lewis6991/gitsigns.nvim',
+      requires = {
+        'nvim-lua/plenary.nvim'
+      },
+      config = function()
+        require('gitsigns').setup {
+          signs = {
+            add = {
+              hl = "GitSignsAdd",
+              text = "▎",
+              numhl = "GitSignsAddNr",
+              linehl = "GitSignsAddLn",
+            },
+            change = {
+              hl = "GitSignsChange",
+              text = "▎",
+              numhl = "GitSignsChangeNr",
+              linehl = "GitSignsChangeLn",
+            },
+            delete = {
+              hl = "GitSignsDelete",
+              text = "契",
+              numhl = "GitSignsDeleteNr",
+              linehl = "GitSignsDeleteLn",
+            },
+            topdelete = {
+              hl = "GitSignsDelete",
+              text = "契",
+              numhl = "GitSignsDeleteNr",
+              linehl = "GitSignsDeleteLn",
+            },
+            changedelete = {
+              hl = "GitSignsChange",
+              text = "▎",
+              numhl = "GitSignsChangeNr",
+              linehl = "GitSignsChangeLn",
+            },
+          }
+        }
+      end
+    }
+    use {
       'kyazdani42/nvim-tree.lua',
       requires = 'kyazdani42/nvim-web-devicons',
       config = function()
         require'nvim-tree'.setup {
+          auto_close = true
         }
       end
     }

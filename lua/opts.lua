@@ -1,4 +1,9 @@
+vim.opt.backup = false
+vim.opt.swapfile = false
 vim.o.background = 'dark'
+vim.opt.clipboard = "unnamedplus"
+vim.opt.cmdheight = 2
+vim.opt.showmode = false
 vim.o.termguicolors = true
 vim.cmd[[colorscheme nord]]
 
