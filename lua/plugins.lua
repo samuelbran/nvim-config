@@ -11,6 +11,20 @@ return require('packer').startup(
 	    "nvim-treesitter/nvim-treesitter",
 	    run = ':TSUpdate',
     }
+    use { 
+      "hrsh7th/nvim-cmp",
+      config = function()
+        require('cmp').setup()
+      end,
+      requires = {
+        "L3MON4D3/LuaSnip",
+        "saadparwaiz1/cmp_luasnip",
+        "hrsh7th/cmp-buffer",
+        "hrsh7th/cmp-nvim-lsp",
+        "hrsh7th/cmp-path",
+        "hrsh7th/cmp-nvim-lua",
+      }
+    }
     use {
       "windwp/nvim-autopairs",
       config = function()
