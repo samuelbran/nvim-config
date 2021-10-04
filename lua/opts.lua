@@ -37,3 +37,5 @@ vim.o.expandtab = true
 vim.bo.expandtab = true
 
 vim.cmd('language en_US.utf-8')
+vim.g.nvim_tree_ignore = { '.git', 'node_modules', '.cache' }
+
